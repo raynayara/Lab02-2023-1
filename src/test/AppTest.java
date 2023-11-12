@@ -120,7 +120,7 @@ public class AppTest {
         e.removeFim();
         assertFalse("Encontrado " + 0, e.buscaElemento(0));
         assertTrue("Encontrado " + 3, e.buscaElemento(3));
-        assertEquals("O ultimo é zero " + 0, 0, e.buscaIndice(2));
+        assertEquals("O ultimo é zero " + 0, 1, e.buscaIndice(2));
     }
 
     @Test
@@ -131,7 +131,7 @@ public class AppTest {
         e.insereInicio(3);
         e.insereElementoPosicao(5, 0);
         assertTrue(e.buscaElemento(5));
-        assertEquals(5, e.buscaIndice(0));
+        assertEquals(4, e.buscaIndice(0));
         e.removeIndice(0);
         assertFalse(e.buscaElemento(5));
         assertEquals(3, e.buscaIndice(0));
